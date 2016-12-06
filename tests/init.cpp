@@ -36,3 +36,8 @@ SCENARIO("Checking count", "[CheckCount]") {
 	REQUIRE(s_sp.count() == 3);
 	REQUIRE(t_sp.count() == 3);
 }
+
+SCENARIO("ctor copy", "[error]") {
+	shared_ptr<size_t> s1;
+	shared_ptr<size_t> s2{ s1 };
+}
